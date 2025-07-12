@@ -153,3 +153,4 @@ GET /api/search: Search for media based on a query.
 GET /api/analytics/overview: Get analytics for the authenticated user's content.
 
 GET /health: A health check endpoint for the server.
+_Algouation_
