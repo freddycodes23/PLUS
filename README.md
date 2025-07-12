@@ -10,7 +10,7 @@ Backend (Node.js/Express): The powerful core of the application. It manages the 
 
 Frontend (HTML/CSS/JS): A dynamic and responsive single-page application (SPA) that interacts with the backend API to display media, handle user input, and manage playback.
 
-Core Technologies
+# Core Technologies
 Backend
 Node.js: A JavaScript runtime for building the server-side application.
 
@@ -28,14 +28,14 @@ fluent-ffmpeg: A library for advanced media processing, used here for generating
 
 Security: Includes helmet for securing HTTP headers, cors for managing cross-origin requests, bcrypt for password hashing, and express-rate-limit to prevent brute-force attacks.
 
-Frontend
+# Frontend
 HTML5: Provides the core structure and content of the application.
 
 CSS3: Handles all styling, including a modern design with gradients, responsive layouts, and smooth animations.
 
 JavaScript (ES6+): Powers all the dynamic and interactive features of the platform, fetching data from the backend API and rendering it dynamically.
 
-Key Features
+# Key Features
 User Authentication: Secure user registration and login system using JWT.
 
 Media Upload & Processing: Users can upload video and audio files. The backend processes videos to generate thumbnails and extracts media duration.
@@ -55,9 +55,9 @@ Secure & Robust: The backend includes important security measures like rate limi
 Responsive Design: The frontend is fully responsive, ensuring a great user experience on desktops, tablets, and mobile devices.
 
 Getting Started
-To get the full-stack StreamBox application running locally, you need to set up both the backend server and the frontend.
+To get the full-stack StreamPLUS application running locally, you need to set up both the backend server and the frontend.
 
-Prerequisites
+# Prerequisites
 Node.js (v14 or higher)
 
 npm (comes with Node.js)
@@ -66,7 +66,7 @@ MongoDB: A running instance of MongoDB (local or cloud-based, like MongoDB Atlas
 
 FFmpeg: This must be installed on the server machine for thumbnail generation and media processing. You can download it from ffmpeg.org.
 
-Backend Setup
+# Backend Setup
 Clone the Repository:
 
 git clone <your-repository-url>
@@ -77,19 +77,19 @@ Navigate to the project directory (where package.json is located) and run:
 
 npm install
 
-Configure Environment Variables:
+# Configure Environment Variables:
 Create a .env file in the root of the project directory and add the following configuration variables. Replace the placeholder values with your own.
 
 # Server Configuration
 PORT=3000
 
 # MongoDB Connection
-MONGODB_URI=mongodb://localhost:27017/streambox
+MONGODB_URI=mongodb://localhost:27017/streamPLUS
 
 # JWT Secret Key
 JWT_SECRET=your-super-secret-and-long-jwt-key
 
-Run the Backend Server:
+# Run the Backend Server:
 
 For development with automatic reloading (requires nodemon):
 
@@ -101,28 +101,28 @@ npm start
 
 The backend server should now be running on http://localhost:3000.
 
-Frontend Setup
+# Frontend Setup
 Save the Frontend Code:
 Save the provided HTML code as index.html.
 
-Update API Endpoints:
+# Update API Endpoints:
 The provided media_streaming_app.html file uses a mock, in-memory JavaScript array (mediaLibrary) for data. To connect it to your live backend, you must modify the JavaScript code within the <script> tag.
 
 Replace the mock data and functions with fetch() calls to your backend API. For example, to load media, you would change renderMediaGrid() to fetch from http://localhost:3000/api/media.
 
-Run the Frontend:
+# Run the Frontend:
 Open the index.html file in a modern web browser. Once you have updated the JavaScript to communicate with your backend, the application will be fully functional.
 
 API Endpoints Overview
 The backend provides the following RESTful API endpoints:
 
-Authentication
+# Authentication
 
 POST /api/register: Create a new user account.
 
 POST /api/login: Log in a user and receive a JWT.
 
-Media
+# Media
 
 POST /api/media/upload: Upload a new media file (requires authentication).
 
@@ -136,7 +136,7 @@ GET /api/user/media: Get all media uploaded by the authenticated user.
 
 DELETE /api/media/:id: Delete a media item (requires ownership).
 
-Comments & Ratings
+# Comments & Ratings
 
 GET /api/media/:id/comments: Get comments for a media item.
 
@@ -146,7 +146,7 @@ DELETE /api/comments/:id: Delete a comment (requires ownership).
 
 POST /api/media/:id/rate: Like or dislike a media item (requires authentication).
 
-Other
+ # Other
 
 GET /api/search: Search for media based on a query.
 
